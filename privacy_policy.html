@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – SmyGameStudios</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f1117;
+      --surface: #181c27;
+      --border: #252a38;
+      --accent: #6c63ff;
+      --accent2: #a78bfa;
+      --text: #e2e6f0;
+      --muted: #8891a8;
+      --heading: #ffffff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 24px 36px;
+      text-align: center;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #6c63ff22, #a78bfa11);
+      border: 1px solid #6c63ff44;
+      border-radius: 999px;
+      padding: 6px 18px 6px 10px;
+      margin-bottom: 28px;
+    }
+
+    .logo-icon {
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .logo-badge span {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent2);
+      letter-spacing: 0.02em;
+    }
+
+    header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    header h1 span {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 56px;
+    }
+
+    .toc-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+
+    @media (max-width: 520px) {
+      .toc ol { grid-template-columns: 1fr; }
+    }
+
+    .toc li { font-size: 14px; }
+
+    .toc a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover { color: var(--accent2); }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 52px;
+      scroll-margin-top: 24px;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--heading);
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 .num {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      background: #6c63ff18;
+      border: 1px solid #6c63ff33;
+      border-radius: 6px;
+      padding: 3px 9px;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent2);
+      margin: 28px 0 10px;
+    }
+
+    p { margin-bottom: 14px; color: var(--text); }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    ul li {
+      padding-left: 20px;
+      position: relative;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* ── Third party cards ── */
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+
+    .service-card h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    .service-card p { font-size: 14px; margin-bottom: 8px; }
+
+    .service-card a {
+      font-size: 13px;
+      color: var(--accent2);
+      text-decoration: none;
+      border-bottom: 1px solid #a78bfa44;
+      transition: border-color 0.2s;
+    }
+
+    .service-card a:hover { border-color: var(--accent2); }
+
+    /* ── Contact box ── */
+    .contact-box {
+      background: linear-gradient(135deg, #6c63ff12, #a78bfa08);
+      border: 1px solid #6c63ff33;
+      border-radius: 14px;
+      padding: 28px 32px;
+    }
+
+    .contact-box p { margin-bottom: 10px; }
+
+    .contact-box .email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 16px;
+      margin-top: 4px;
+    }
+
+    .contact-box .email a {
+      color: var(--accent2);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer strong { color: var(--text); }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0 0 52px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-badge">
+    <div class="logo-icon">🎮</div>
+    <span>SmyGameStudios</span>
+  </div>
+  <h1>Privacy <span>Policy</span></h1>
+  <p class="meta">Effective Date: June 29, 2025 &nbsp;·&nbsp; Last Updated: June 29, 2025</p>
+</header>
+
+<div class="container">
+
+  <nav class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Your Information</a></li>
+      <li><a href="#s3">Third-Party Services</a></li>
+      <li><a href="#s4">Data Sharing</a></li>
+      <li><a href="#s5">Data Retention</a></li>
+      <li><a href="#s6">Your Rights</a></li>
+      <li><a href="#s7">Children's Privacy</a></li>
+      <li><a href="#s8">Data Security</a></li>
+      <li><a href="#s9">International Transfers</a></li>
+      <li><a href="#s10">Contact Us</a></li>
+      <li><a href="#s11">Policy Changes</a></li>
+    </ol>
+  </nav>
+
+  <p style="margin-bottom:40px;">This Privacy Policy describes how <strong>SmyGameStudios</strong> collects, uses, and protects information when you use our mobile puzzle game (the "Game"). By playing the Game, you agree to the practices described in this policy.</p>
+
+  <!-- 1 -->
+  <section id="s1">
+    <h2><span class="num">01</span> Information We Collect</h2>
+
+    <h3>Anonymous Account</h3>
+    <p>When you launch the Game, we automatically create an anonymous account via Firebase Authentication. No personal information is required to play.</p>
+
+    <h3>Optional Google Account Linking</h3>
+    <p>If you choose to link your anonymous account to your Google account, we collect:</p>
+    <ul>
+      <li>Email address</li>
+      <li>Display name (first and last name)</li>
+      <li>Profile photo URL</li>
+    </ul>
+    <p>This is entirely optional and can be done or undone at any time in the Game's settings.</p>
+
+    <h3>Game Progress Data</h3>
+    <p>To power leaderboards and sync your progress, we store:</p>
+    <ul>
+      <li>Experience points (XP) and current level number</li>
+      <li>In-game coin balance</li>
+      <li>Music and sound effect preferences (on/off)</li>
+      <li>Other gameplay state and settings</li>
+    </ul>
+
+    <h3>Device & Usage Data</h3>
+    <p>Firebase Analytics and Google AdMob may automatically collect:</p>
+    <ul>
+      <li>Device advertising ID (GAID)</li>
+      <li>IP address and approximate location (country/region)</li>
+      <li>Device type, OS version, and app version</li>
+      <li>In-game events and session statistics</li>
+      <li>Ad interaction data</li>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 2 -->
+  <section id="s2">
+    <h2><span class="num">02</span> How We Use Your Information</h2>
+    <ul>
+      <li>Create and manage your anonymous or Google-linked account</li>
+      <li>Save and sync your game progress across sessions</li>
+      <li>Display leaderboards and rank players</li>
+      <li>Personalise and improve your gaming experience</li>
+      <li>Serve in-game advertisements via Google AdMob</li>
+      <li>Analyse app performance and fix bugs via Firebase Analytics</li>
+      <li>Comply with applicable legal obligations</li>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 3 -->
+  <section id="s3">
+    <h2><span class="num">03</span> Third-Party Services</h2>
+    <p>The Game integrates the following third-party services. Each operates under its own privacy policy.</p>
+
+    <div class="service-card">
+      <h3>🔥 Google Firebase</h3>
+      <p>Used for anonymous authentication, Google Sign-In, game data storage (Firestore), and usage analytics (Firebase Analytics).</p>
+      <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy →</a>
+    </div>
+
+    <div class="service-card">
+      <h3>📢 Google AdMob</h3>
+      <p>Used to display in-game advertisements. AdMob may use your Advertising ID to serve personalised ads. You can opt out on Android via <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong>.</p>
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy →</a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 4 -->
+  <section id="s4">
+    <h2><span class="num">04</span> Data Sharing</h2>
+    <p>We do not sell your personal information. We share data only in these cases:</p>
+    <ul>
+      <li>With Firebase and Google as service providers, strictly to operate the Game</li>
+      <li>With AdMob to deliver in-game advertisements</li>
+      <li>When required by law, court order, or legal process</li>
+      <li>To protect the rights, property, or safety of our users or the public</li>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 5 -->
+  <section id="s5">
+    <h2><span class="num">05</span> Data Retention</h2>
+    <p>We retain your game data for as long as your account is active or as needed to provide the Game's services. Anonymous accounts with extended inactivity may be deleted. If you linked your Google account, data is retained until you request deletion.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 6 -->
+  <section id="s6">
+    <h2><span class="num">06</span> Your Rights</h2>
+    <p>Depending on your location, you may have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Correct inaccurate data</li>
+      <li>Request deletion of your data</li>
+      <li>Object to or restrict certain data processing</li>
+      <li>Data portability (EU/EEA residents under GDPR)</li>
+      <li>Lodge a complaint with your national supervisory authority (EU/EEA residents)</li>
+    </ul>
+    <p style="margin-top:14px;">To exercise any of these rights, contact us at <a href="mailto:smygamestudios@gmail.com" style="color:var(--accent2);">smygamestudios@gmail.com</a>.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 7 -->
+  <section id="s7">
+    <h2><span class="num">07</span> Children's Privacy</h2>
+    <p>The Game is intended for users aged <strong>13 and older</strong>. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us immediately and we will promptly delete it.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 8 -->
+  <section id="s8">
+    <h2><span class="num">08</span> Data Security</h2>
+    <p>We implement industry-standard security measures including encrypted data transmission (HTTPS/TLS) and secure Firebase infrastructure. No method of electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 9 -->
+  <section id="s9">
+    <h2><span class="num">09</span> International Data Transfers</h2>
+    <p>The Game is available worldwide. Your data may be processed on servers located outside your country of residence, including in the United States. By using the Game, you consent to such transfers. For EU/EEA users, transfers are conducted in compliance with GDPR requirements.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 10 -->
+  <section id="s10">
+    <h2><span class="num">10</span> Contact Us</h2>
+    <div class="contact-box">
+      <p>If you have any questions, concerns, or data requests regarding this Privacy Policy, please reach out:</p>
+      <div class="email">
+        <span>✉️</span>
+        <a href="mailto:smygamestudios@gmail.com">smygamestudios@gmail.com</a>
+      </div>
+      <p style="margin-top:14px; font-size:14px; color:var(--muted);">We aim to respond to all privacy-related requests within <strong style="color:var(--text);">30 days</strong>.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- 11 -->
+  <section id="s11">
+    <h2><span class="num">11</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the top of this page. Continued use of the Game after any changes constitutes your acceptance of the updated policy. For significant changes, we will notify you within the Game.</p>
+  </section>
+
+</div>
+
+<footer>
+  <p><strong>SmyGameStudios</strong> &nbsp;·&nbsp; <a href="mailto:smygamestudios@gmail.com" style="color:var(--accent2); text-decoration:none;">smygamestudios@gmail.com</a></p>
+  <p style="margin-top:8px;">© 2025 SmyGameStudios. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
